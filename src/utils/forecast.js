@@ -17,7 +17,7 @@ const forecast=(latitude,longitude,callback)=>
             //     currentTemp:response .body.current.temperature,
             //     Feeltemp:response.body.current.feelslike,
             // })
-            callback(undefined,body.current.weather_descriptions[0]+'. It is currently '+ body.current.temperature +' but it feel like '+ body.current.feelslike+' There is a ' + body.current.precip + ' % chance of rain.')
+            callback(undefined,body.current.weather_descriptions[0]+'. It is currently '+ body.current.temperature +' but it feel like '+ body.current.feelslike +' There is humidity of '+body.current.humidity +'.'+' There is a ' + body.current.precip + ' % chance of rain. '+ 'There is pressure of '+body.current.pressure )
             // callback(undefined, body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' degress out. There is a ' + body.currently.precipProbability + '% chance of rain.')
         }
     })
